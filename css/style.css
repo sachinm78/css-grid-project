@@ -11,3 +11,19 @@ body {
 h1, h2, strong {
     font-weight: 700;
 }
+
+
+/* ==================
+    hero area
+===================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+    background-image: url(../img/hero-bg.jpg);
+    color: #fff;
+}
+
+.hero > * {
+    grid-column: 2 / -2;
+}
