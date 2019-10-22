@@ -59,6 +59,11 @@ h1, h2, strong {
     grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
 }
 
+@media (min-width: 600px) {
+    .main-grid {
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+    }
+}
 
 /* footer */
 
@@ -115,6 +120,13 @@ h1, h2, strong {
 
 .hero > * {
     grid-column: 2 / -2;
+}
+
+@media (min-width: 600px) {
+    .hero > * {
+        grid-column: 2 / span 2;
+    }
+
 }
 
 
