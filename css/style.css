@@ -114,6 +114,8 @@ h1, h2, strong {
 
 .hero {
     background-image: url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position: bottom right;
     padding: 4em 0;
     color: #fff;
 }
