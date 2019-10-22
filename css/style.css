@@ -57,13 +57,15 @@ h1, h2, strong {
 .main-grid {
     display: grid;
     grid-template-columns: minmax(1em, 1fr) minmax(0px, 500px) minmax(1em, 1fr);
+    grid-column-gap: 2em;
 }
 
 @media (min-width: 600px) {
     .main-grid {
-        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(1em, 1fr);
     }
 }
+
 
 /* footer */
 
@@ -71,6 +73,10 @@ h1, h2, strong {
     background: #ebebeb;
     padding: 4em 0;
     text-align: center;
+    
+    grid-template-areas:
+        ". social ."
+        ". main .";
 }
 
 .footer-main,
@@ -84,13 +90,17 @@ h1, h2, strong {
     opacity: .5;
 }
 
+.footer-main {
+    grid-area: main;
+}
+
 .footer-fineprint {
     font-size: .75rem;
     margin-top: 4em;
 }
 
 .social-list {
-    order: -1;
+    grid-area: social;
     list-style: none;
     padding: 0;
     margin: 0 0 2em;
@@ -108,6 +118,21 @@ h1, h2, strong {
     color: #777;
 }
 
+@media (min-width: 600px) {
+    .footer {
+        grid-template-areas: 
+          ". main main social ."
+    }
+    
+    .footer-main {
+        text-align: left;
+    }
+    
+    .social-list {
+        justify-content: flex-end;
+    }
+}
+
 /* ==================
     hero area
 ===================== */
@@ -115,7 +140,7 @@ h1, h2, strong {
 .hero {
     background-image: url(../img/hero-bg.jpg);
     background-size: cover;
-    background-position: bottom right;
+    background-position: bottom;
     padding: 4em 0;
     color: #fff;
 }
@@ -125,6 +150,11 @@ h1, h2, strong {
 }
 
 @media (min-width: 600px) {
+    
+    .hero {
+        padding: 6em 0;
+    }
+    
     .hero > * {
         grid-column: 2 / span 2;
     }
@@ -143,4 +173,14 @@ h1, h2, strong {
 
 .col {
     grid-column: 2 / -2;
+}
+
+@media (min-width: 600px) {
+    .col {
+        grid-column: span 1;
+    }
+    
+    .col:first-child {
+        grid-column: 2 / span 1;
+    }
 }
