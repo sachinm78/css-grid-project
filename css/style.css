@@ -79,7 +79,6 @@ h1, h2, strong {
 
 .logo-link {
     background-color: #FFE600;
-    padding-top: 2em;
 }
 
 .nav {
@@ -97,7 +96,6 @@ h1, h2, strong {
 .navigation-open {
     transform: translateX(-100%);
 }
-
 
 .nav-list {
     display: flex;
@@ -141,6 +139,30 @@ h1, h2, strong {
     padding: .5em;
     margin-left: auto;
     font-size: 1.5em;
+}
+
+@media (min-width: 600px) {
+    .open-nav,
+    .close-nav {
+        display: none;
+    }
+    
+    .nav {
+        position: initial;
+    }
+    
+    .nav-list {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    .nav-item {
+        margin-left: 2em;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+    }
 }
 
 /* footer */
