@@ -89,12 +89,17 @@ h1, h2, strong {
     font-weight: 700;
     margin-top: .5em;
     text-decoration: none;
+    border: 0;
 }
 
 .btn-primary {
     background: #FFE600;
     color: #000;
     justify-self: start;
+}
+
+.btn-form {
+    justify-self: end;
 }
 
 
@@ -375,4 +380,29 @@ h1, h2, strong {
     .secondary-text {
         order: 2;
     }
+}
+
+
+/* ==================
+    form
+===================== */
+
+.contact-form {
+    display: grid;
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+textarea {
+    margin-bottom: .75em;
+    padding: .4em;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
 }
