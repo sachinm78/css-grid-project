@@ -8,6 +8,10 @@ body {
     line-height: 1.6;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
 
 /* ==================
     Typography
@@ -21,6 +25,20 @@ h1, h2, strong {
     color: #FFE600;
 }
 
+.page-title,
+.subtitle {
+    grid-column: 2 / -2;
+    color: #000;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+}
 
 .hero-title {
     font-size: 1.5rem;
@@ -60,7 +78,7 @@ h1, h2, strong {
     grid-column-gap: 2em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     .main-grid {
         grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(1em, 1fr);
     }
@@ -79,6 +97,7 @@ h1, h2, strong {
 
 .logo-link {
     background-color: #FFE600;
+    padding-top: 2em;
 }
 
 .nav {
@@ -141,7 +160,7 @@ h1, h2, strong {
     font-size: 1.5em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     .open-nav,
     .close-nav {
         display: none;
@@ -185,7 +204,7 @@ h1, h2, strong {
 .footer-logo,
 .footer-text,
 .footer-fineprint {
-    opacity: .5;
+    opacity: .3;
 }
 
 .footer-main {
@@ -208,7 +227,7 @@ h1, h2, strong {
 
 .social-link {
     color: #000;
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin: 0 .5em;
 }
 
@@ -216,7 +235,7 @@ h1, h2, strong {
     color: #777;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     .footer {
         grid-template-areas: 
           ". main main social ."
@@ -239,7 +258,7 @@ h1, h2, strong {
     background-image: url(../img/hero-bg.jpg);
     background-size: cover;
     background-position: bottom;
-    padding: 4em 0;
+    padding: 8em 0 4em;
     color: #fff;
 }
 
@@ -247,10 +266,16 @@ h1, h2, strong {
     grid-column: 2 / -2;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
+    .hero > * {
+        margin-right: 20%;
+    }
+}
+
+@media (min-width: 700px) {
     
     .hero {
-        padding: 6em 0;
+        padding: 10em 0 6em;
     }
     
     .hero > * {
@@ -273,12 +298,35 @@ h1, h2, strong {
     grid-column: 2 / -2;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     .col {
         grid-column: span 1;
     }
     
     .col:first-child {
         grid-column: 2 / span 1;
+    }
+}
+
+
+/* ==================
+    template page
+===================== */
+
+.main-template {
+    padding: 4em 0;
+}
+
+.main-template > * {
+    grid-column: 2 / -2;
+}
+
+@media (min-width: 700px) {
+    .main-image {
+        grid-column: 2;
+    }
+    
+    .main-text {
+        grid-column: 3 / span 2;
     }
 }
