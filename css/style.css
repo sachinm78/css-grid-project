@@ -10,7 +10,6 @@ body {
 
 img {
     max-width: 100%;
-    display: block;
 }
 
 /* ==================
@@ -28,15 +27,17 @@ h1, h2, strong {
 .page-title,
 .subtitle {
     grid-column: 2 / -2;
-    color: white;
-    text-align: left;
+    color: #000;
+    text-align: center;
 }
 
 .page-title {
     font-size: 3rem;
+    margin-bottom: 0;
 }
 
 .subtitle {
+    margin: .5em 0 3em;
     font-size: 1.125rem;
 }
 
@@ -50,6 +51,10 @@ h1, h2, strong {
     font-size: 1.125rem;
     color: #000;
     margin-top: 1.25em;
+}
+
+.section-title:first-child {
+    margin-top: 0;
 }
 
 /* buttons */
@@ -215,7 +220,7 @@ h1, h2, strong {
 .footer-logo,
 .footer-text,
 .footer-fineprint {
-    opacity: .3;
+    opacity: .5;
 }
 
 .footer-main {
@@ -269,7 +274,7 @@ h1, h2, strong {
     background-image: url(../img/hero-bg.jpg);
     background-size: cover;
     background-position: bottom;
-    padding: 1em 0 1em;
+    padding: 4em 0 2em;
     color: #fff;
 }
 
@@ -326,6 +331,10 @@ h1, h2, strong {
 
 .main-template > * {
     grid-column: 2 / -2;
+}
+
+.main-image {
+    margin-bottom: 1.5em;
 }
 
 @media (min-width: 600px) {
