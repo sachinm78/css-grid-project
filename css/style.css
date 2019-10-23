@@ -28,8 +28,8 @@ h1, h2, strong {
 .page-title,
 .subtitle {
     grid-column: 2 / -2;
-    color: #000;
-    text-align: center;
+    color: white;
+    text-align: left;
 }
 
 .page-title {
@@ -78,7 +78,7 @@ h1, h2, strong {
     grid-column-gap: 2em;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .main-grid {
         grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(1em, 1fr);
     }
@@ -90,6 +90,14 @@ h1, h2, strong {
     background: black;
 }
 
+.header-home {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+}
+
+
+
 .header-content {
     display: flex;
     grid-column: 2 / -2;
@@ -97,7 +105,6 @@ h1, h2, strong {
 
 .logo-link {
     background-color: #FFE600;
-    padding-top: 2em;
 }
 
 .nav {
@@ -160,7 +167,7 @@ h1, h2, strong {
     font-size: 1.5em;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .open-nav,
     .close-nav {
         display: none;
@@ -181,6 +188,10 @@ h1, h2, strong {
     
     .nav-link {
         font-size: 1rem;
+    }
+    
+    .header-home .nav {
+        background: transparent;
     }
 }
 
@@ -235,7 +246,7 @@ h1, h2, strong {
     color: #777;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .footer {
         grid-template-areas: 
           ". main main social ."
@@ -258,7 +269,7 @@ h1, h2, strong {
     background-image: url(../img/hero-bg.jpg);
     background-size: cover;
     background-position: bottom;
-    padding: 8em 0 4em;
+    padding: 1em 0 1em;
     color: #fff;
 }
 
@@ -272,11 +283,7 @@ h1, h2, strong {
     }
 }
 
-@media (min-width: 700px) {
-    
-    .hero {
-        padding: 10em 0 6em;
-    }
+@media (min-width: 600px) {
     
     .hero > * {
         grid-column: 2 / span 2;
@@ -298,7 +305,7 @@ h1, h2, strong {
     grid-column: 2 / -2;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .col {
         grid-column: span 1;
     }
@@ -321,7 +328,7 @@ h1, h2, strong {
     grid-column: 2 / -2;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
     .main-image {
         grid-column: 2;
     }
